@@ -14,6 +14,10 @@ spec:
   - name: monitoring-port
     port: 8080
     targetPort: 8080
+  - name: webhook-server
+      port: 443
+      protocol: TCP
+      targetPort: 9443
   selector:
     control-plane: kubeflow-training-operator
   type: ClusterIP
